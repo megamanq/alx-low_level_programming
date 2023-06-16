@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main: entry point
+ * main : entry point
  *
  * Description: this function write that sentence on the std out
  *
