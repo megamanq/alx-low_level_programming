@@ -1,8 +1,8 @@
 #include <stdio.h>
 /**
- * main - this function to write a message using puts
+ * Entry point of the function is to write a messge. 
  *
- * return: the return is always 0
+ * @return 0 when it end succesfully
  */
 int main(void)
 {
