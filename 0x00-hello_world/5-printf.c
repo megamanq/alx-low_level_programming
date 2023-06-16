@@ -2,9 +2,9 @@
 /**
  * main - entry point
  *
- * description : this code print that sentence on teh stndr out using printf.
+ * Description : this code print that sentence on teh stndr out using printf.
  *
- * -Return : always  0 when on succeed
+ * Return: always (0) when on succeed
  */
 int main(void)
 {
