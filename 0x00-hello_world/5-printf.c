@@ -4,7 +4,7 @@
  *
  * description : this code print that sentence on teh stndr out using printf.
  *
- * Return 0 when on succeed
+ * -Return 0 when on succeed
  */
 int main(void)
 {
