@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main: this function to write a message using puts
+ * main - this function to write a message using puts
  *
  * return: the return is always 0
  */
