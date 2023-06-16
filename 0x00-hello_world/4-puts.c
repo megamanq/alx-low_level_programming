@@ -1,8 +1,11 @@
 #include <stdio.h>
 /**
- * Entry point of the function is to write a messge. 
+ * main - Entry point
  *
- * @return 0 when it end succesfully
+ * Description: Prints a message to the standard output
+ *              using the puts function
+ *
+ * Return: Always 0 (Success)
  */
 int main(void)
 {
