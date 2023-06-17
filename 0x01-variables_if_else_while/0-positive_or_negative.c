@@ -1,13 +1,11 @@
 #include <stdlib.h>
 #include <time.h>
-#include <stdio.h>
-
 /**
- * main - Entry point
+ * main - entry point
  *
- * Description: this code check if a rndm number is pos or neg
+ * description: this progam print the sign of a rndm num
  *
- * Return:always 0  onsucceed
+ * return: is always (0) on succeed
  */
 int main(void)
 {
@@ -19,13 +17,13 @@ int main(void)
 	{
 		printf("%d is negative\n", n);
 	}
-	else if (n == 0)
+	else if (n > 0)
 	{
-		printf("%d is zero\n", n);
+		printf("%d is positive\n", n);
 	}
 	else
 	{
-		printf("%d is positive\n", n);
+		printf("%d is zero\n", n);
 	}
 	return (0);
 }
