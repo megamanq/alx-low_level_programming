@@ -2,7 +2,7 @@
 /**
  * main - Entry point
  *
- * Description: this code is print nll possible combinations of single-digit numbers
+ * Description: print nll possible combinations of single-digit numbers
  *
  * Return: always 0 on succeed
  */
