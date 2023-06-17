@@ -6,7 +6,7 @@
  *
  * description: this progam print the sign of a rndm num
  *
- * return: is always (0) on succeed
+ * Return: is always (0) on succeed
  */
 int main(void)
 {
