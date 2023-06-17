@@ -5,8 +5,9 @@
 /**
  * main - Entry point
  *
- * Return:always 0  onsucceed
+ * Description: this code check if a rndm number is pos or neg
  *
+ * Return:always 0  onsucceed
  */
 int main(void)
 {
