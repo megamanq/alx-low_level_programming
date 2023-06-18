@@ -2,17 +2,18 @@
 /**
  * main - entry point
  *
- * description : print all alfabet lower \q and e
+ * description: print all alfabet lower \q and e
  *
- * Return : is always 0 when succeed
+ * Return: is always 0 when succeed
  */
+
 int main(void)
 {
 	char i;
 
 	for (i = 'a'; i <= 'z'; i++)
 	{
-		if (i != 'q' || i != 'e')
+		if (i != 'q' && i != 'e')
 		{
 			putchar(i);
 		}
