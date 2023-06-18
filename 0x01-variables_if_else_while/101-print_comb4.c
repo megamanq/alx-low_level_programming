@@ -18,16 +18,16 @@ int main(void)
 		for (; j < 10; j++)
 		{
 			k = j + 1;
-			for (; k < 10;)
+			for (; k < 10; k++ )
 			{
 				putchar('0' + i);
                         	putchar('0' + j);
 				putchar('0' + k);
 				if (k != 9 || j != 8 || i != 7)
 				{
-                       		putchar(',');
-                        	putchar(' ');
-                        	}
+				putchar(',');
+				putchar(' ');
+				}
 			}
 		}
 	}
