@@ -1,11 +1,12 @@
 #include "main.h"
 /**
- * main - entry point
+ * print_alphabet - function
  *
  * descriptio: this code prints the alphabet in lowrcase
  *
- * Return: on success 0
+ * Return: no return void
  */
+
 void print_alphabet(void)
 {
 	char i;
