@@ -2,7 +2,7 @@
 /**
  * _abs() - a function
  *
- * description: compute the absolute of an integer
+ * Description: compute the absolute of an integer
  * @i: the integer to copute its absolute
  *
  * Return: always (the result) on succeed
