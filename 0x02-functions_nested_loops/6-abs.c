@@ -1,6 +1,6 @@
 #include "main.h"
 /**
- * _abs() - a function
+ * _abs - a function
  *
  * Description: compute the absolute of an integer
  * @i: the integer to copute its absolute
