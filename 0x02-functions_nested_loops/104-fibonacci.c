@@ -6,29 +6,37 @@
  *
  * Return: no return
  */
-
 int main(void)
 {
-	int i = 2;
+	unsigned long int i, a, b, j, c, d, e, f, g, h, k;
 
-	float a = 1;
-	float b = a + 1;
-	float c = a + b;
+	i = 1;
+	j = 2;
+	e = i + j;
 
-	printf("%.0f, ", a);
-	printf("%.0f, ", b);
-	while (i < 98)
+	printf("%lu, ", i);
+	printf("%lu, ", j);
+	for (h = 3; h < 89; h++)
 	{
-		i++;
-		printf("%.0f", c);
-		a = b;
-		b = c;
-		c = a + b;
-		if (i < 98)
-		{
-			printf(", ");
-		}
+		printf("%lu, ", e);
+		i = j;
+		j = e;
+		e = i + j;
 	}
-	printf("\n");
+	c = j / 1000000000;
+	d = j % 1000000000;
+	f = e / 1000000000;
+	g = e % 1000000000;
+	for (k = 89; k < 98; k++)
+	{
+		printf("%lu%lu, ", f, g);
+		a = c;
+		b = d;
+		c = f;
+		d = g;
+		f = a + c + ((b + d) / 1000000000);
+		g = (b + d) % 1000000000;
+	}
+printf("%lu%lu\n", f, g);
 	return (0);
 }
