@@ -45,17 +45,17 @@ void times_table(void)
 				_putchar(',');
 			}
 			else if (res >= 10 && j == 9)
-                        {
-                                _putchar(' ');
-                                _putchar('0' + res / 10);
-                                _putchar('0' + res % 10);
-                        }
+			{
+				_putchar(' ');
+				_putchar('0' + res / 10);
+				_putchar('0' + res % 10);
+			}
 			else if (res <= 10 && j == 9)
-                        {
-                                _putchar(' ');
-                                _putchar(' ');
-                                _putchar('0' + res % 10);
-                        }
+			{
+				_putchar(' ');
+				_putchar(' ');
+				_putchar('0' + res % 10);
+			}
 		}
 		_putchar('\n');
 	}
