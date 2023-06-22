@@ -1,12 +1,12 @@
 #include "main.h"
 
 /**
- * _isupper - main function
+ * _isupper - pimary function
  * 
- * Description: checks if uppercase
+ * descriptio: checks if uppercase
  * @c: character to check
  *
- * Return: return 1 on true and 0 on false
+ * Return: always 1 on true and 0 on false
  */
 int _isupper(int c)
 {
