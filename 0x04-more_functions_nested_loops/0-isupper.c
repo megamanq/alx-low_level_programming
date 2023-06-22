@@ -1,9 +1,8 @@
 #include "main.h"
 /**
- * _isupper - pimary function
+ * _isupper - check if it is upperca
  * 
- * descriptio: checks if uppercase
- * @c: character to check
+ * @c: data to check
  *
  * Return: always 1 on true and 0 on false
  */
