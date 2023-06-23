@@ -3,6 +3,8 @@
  * add - main function
  *
  * description: add 2 int
+ * @a: first int
+ * @b: sec int
  *
  * Return: always the result
  */
