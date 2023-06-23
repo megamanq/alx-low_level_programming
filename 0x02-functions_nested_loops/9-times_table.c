@@ -23,32 +23,20 @@ void times_table(void)
 				_putchar('0' + j);
 				_putchar(',');
 			}
-			else if (i == 0 && j != 0 && j != 9)
-			{
-				_putchar(' ');
-				_putchar(' ');
-				_putchar('0' + i);
-				_putchar(',');
-			}
-			else if (res < 10 && res != 0 && j != 9)
+			else if (j != 9 && ((res == 0  && j != 0) || (res < 10 && res != 0)))
 			{
 				_putchar(' ');
 				_putchar(' ');
 				_putchar('0' + res);
 				_putchar(',');
 			}
-			else if (res >= 10 && j != 9)
+			else if (res >= 10)
 			{
 				_putchar(' ');
 				_putchar('0' + res / 10);
 				_putchar('0' + res % 10);
-				_putchar(',');
-			}
-			else if (res >= 10 && j == 9)
-			{
-				_putchar(' ');
-				_putchar('0' + res / 10);
-				_putchar('0' + res % 10);
+				if (j != 9)
+					_putchar(',');
 			}
 			else if (res <= 10 && j == 9)
 			{
