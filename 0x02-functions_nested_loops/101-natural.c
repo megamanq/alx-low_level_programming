@@ -13,7 +13,7 @@ int main(void)
 
 	for (i = 0; i <= 1024; i++)
 	{
-		if (!(i%3) || !(i%5))
+		if (!(i % 3) || !(i % 5))
 		{
 			res += i;
 		}
