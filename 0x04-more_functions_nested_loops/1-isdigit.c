@@ -2,6 +2,7 @@
 /**
  * _isupper - check if digit
  * 
+ * description: check if data is digit
  * @c: integer to check
  *
  * Return: return 1 on true and 0 on false
