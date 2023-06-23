@@ -18,7 +18,12 @@ int main(void)
 		res = a + b;
 		a = b;
 		b = res;
+		if (i != 50)
+		{
 		printf("%lu, ", res);
+		}
+		else
+			printf("%lu", res);
 
 	}
 	printf("\n");
