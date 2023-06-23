@@ -1,12 +1,11 @@
-#include "main.h"
 #include <stdio.h>
+#include "main.h"
 /**
- * main - entry point
+ * main - print the largest prime factor
  *
- * description: print the prime factor
- * 
  * Return: always 0
  */
+
 int main(void)
 {
 	unsigned long int i, n = 612852475143;
