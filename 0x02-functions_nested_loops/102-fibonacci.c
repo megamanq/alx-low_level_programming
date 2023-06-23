@@ -9,16 +9,16 @@
 int main(void)
 {
 	int i;
-	int a = 0;
-	int b = 1;
-	long unsigned int res = 0;
+	unsigned int a = 0;
+	unsigned int b = 1;
+	unsigned int res = 0;
 
 	for (i = 1; i <= 50; i++)
 	{
 		res = a + b;
 		a = b;
 		b = res;
-		printf("%lu, ", res);
+		printf("%u, ", res);
 
 	}
 	printf("\n");
