@@ -13,7 +13,7 @@ int main(void)
 	unsigned long int b = 1;
 	unsigned long int res = 0;
 
-	for (i = 1; i <= 50; i++)
+	for (i = 1; i <= 98; i++)
 	{
 		res = a + b;
 		a = b;
