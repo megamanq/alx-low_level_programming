@@ -2,30 +2,41 @@
 /**
  * main - entry point
  *
- * description: print first 50 fibonacci
+ * Description: prints the first 98 Fibonacci numbers
  *
- * Return: 0 on terminate
+ * Return: no return
  */
 int main(void)
 {
-	int i;
-	unsigned long int a = 0;
-	unsigned long int b = 1;
-	unsigned long int res = 0;
+	unsigned long int i, a, b, j, c, d, e, f, g, h, k;
 
-	for (i = 1; i <= 98; i++)
+	i = 1;
+	j = 2;
+	e = i + j;
+
+	printf("%lu, ", i);
+	printf("%lu, ", j);
+	for (h = 3; h < 89; h++)
 	{
-		res = a + b;
-		a = b;
-		b = res;
-		if (i != 98)
-		{
-		printf("%lu, ", res);
-		}
-		else
-			printf("%lu", res);
-
+		printf("%lu, ", e);
+		i = j;
+		j = e;
+		e = i + j;
 	}
-	printf("\n");
+	c = j / 1000000000;
+	d = j % 1000000000;
+	f = e / 1000000000;
+	g = e % 1000000000;
+	for (k = 89; k < 98; k++)
+	{
+		printf("%lu%lu, ", f, g);
+		a = c;
+		b = d;
+		c = f;
+		d = g;
+		f = a + c + ((b + d) / 1000000000);
+		g = (b + d) % 1000000000;
+	}
+printf("%lu%lu\n", f, g);
 	return (0);
 }
