@@ -2,6 +2,8 @@
 #include <stdio.h>
 /**
  * main - entry point
+ *
+ * description: print the prime factor
  * 
  * Return: always 0
  */
