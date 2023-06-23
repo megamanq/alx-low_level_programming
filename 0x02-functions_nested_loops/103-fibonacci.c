@@ -19,12 +19,10 @@ int main(void)
 		res = a + b;
 		a = b;
 		b = res;
-		if (res < 4000000)
+		if (res < 4000000 && !(res % 2))
 		{
 			sum += res;
 		}
-		else
-			break;
 
 	}
 	printf("%d\n", sum);
