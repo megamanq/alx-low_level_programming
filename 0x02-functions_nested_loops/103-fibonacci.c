@@ -9,7 +9,7 @@
 int main(void)
 {
 	int i;
-	int sum = 0;
+	unsigned int sum = 0;
 	unsigned long int a = 0;
 	unsigned long int b = 1;
 	unsigned long int res = 0;
@@ -19,10 +19,12 @@ int main(void)
 		res = a + b;
 		a = b;
 		b = res;
-		if (res <= 4000000)
+		if (res < 4000000)
 		{
 			sum += res;
 		}
+		else
+			break;
 
 	}
 	printf("%d\n", sum);
