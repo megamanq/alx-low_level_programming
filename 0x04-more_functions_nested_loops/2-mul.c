@@ -4,7 +4,7 @@
  *
  * description: multiplie two integers
  * @a: first int
- * @b sec int
+ * @b: sec int
  *
  * Return: (res)
  */
