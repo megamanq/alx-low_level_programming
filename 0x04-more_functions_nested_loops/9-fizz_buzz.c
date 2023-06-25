@@ -16,7 +16,6 @@ int main(void)
 		{
 			printf(" ");
 		}
-
 		if (!(i % 3) && !(i % 5))
 		{
 			printf("FizzBuzz");
@@ -31,7 +30,6 @@ int main(void)
 		}
 		else	
 			printf("%d", i);
-		
 		i++;
 	}
 	printf("\n");
