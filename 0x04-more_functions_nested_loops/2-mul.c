@@ -6,7 +6,7 @@
  * @a: first int
  * @b: sec int
  *
- * Return : resulta
+ * Return: resulta
  */
 int mul(int a, int b)
 {
