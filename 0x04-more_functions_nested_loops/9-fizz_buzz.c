@@ -2,7 +2,7 @@
 /**
  * main - entry point
  *
- * description: fizz buzz test
+ * Description : print the biz fizz test
  *
  * Return: always 0
  */
