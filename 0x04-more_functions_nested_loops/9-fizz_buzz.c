@@ -1,8 +1,9 @@
 #include <stdio.h>
+
 /**
  * main - entry point
  *
- * Description : print the biz fizz test
+ * Description: print the biz fizz test
  *
  * Return: always 0
  */
