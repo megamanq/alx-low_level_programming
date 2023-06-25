@@ -6,12 +6,9 @@
  * @a: first int
  * @b: sec int
  *
- * Return: (res)
+ * return : resulta
  */
 int mul(int a, int b)
 {
-	int res;
-
-	res = a * b;
-	return (res);
+	return (a * b);
 }
