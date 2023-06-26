@@ -2,10 +2,11 @@
 /**
  * print_triangle - main function
  *
- * description: prints a triangle
+ * Description: prints a triangle
  *
  * Return: no return
  */
+
 void print_triangle(int size)
 {
 	int i = 0;
@@ -22,7 +23,6 @@ void print_triangle(int size)
 			}
 			else
 				_putchar('#');
-
 			j++;
 		}
 		i++;
