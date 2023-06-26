@@ -5,7 +5,7 @@
  * @dest:char
  * @src:char
  *
- * return: when success return dest
+ * Return: when success return dest
  */
 char *_strcpy(char *dest, char *src)
 {
