@@ -6,7 +6,6 @@
  *
  * Return: no return
  */
-
 void print_triangle(int size)
 {
 	if (size <= 0)
@@ -28,7 +27,9 @@ void print_triangle(int size)
 					_putchar(' ');
 				}
 				else
+				{
 					_putchar('#');
+				}
 				j++;
 			}
 			i++;
