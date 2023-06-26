@@ -1,4 +1,4 @@
-#include "stdio.h"
+#include <stdio.h>
 /**
  * main - entry point
  *
@@ -9,7 +9,7 @@
 int main(void)
 {
 	unsigned long int num = 612852475143;
-	int i = 2;
+	unsigned long int i = 2;
 
 	while (i != num)
 	{
