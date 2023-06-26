@@ -1,5 +1,6 @@
 #include "main.h"
 /**
+ * print_triangle - main function
  *
  * description : print triangles
  * @size : the size of the triangle
@@ -8,7 +9,7 @@
  */
 void print_triangle(int size)
 {
-	if (size <= 0)
+	if (size <=0)
 		_putchar('\n');
 	else
 	{
