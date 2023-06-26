@@ -2,7 +2,7 @@
 /**
  * print_triangle - main function
  *
- * Description: prints a triangle
+ * description : prints a triangle
  *
  * Return: no return
  */
