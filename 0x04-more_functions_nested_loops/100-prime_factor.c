@@ -2,7 +2,7 @@
 /**
  * main - entry point
  *
- * description : find and print largest prime factor
+ * Description: find and print largest prime factor
  *
  * Return: always 0
  */
