@@ -5,8 +5,9 @@
  *
  * Description: print the biz fizz test
  *
- * Return: always 0
+ * Return: always (0) on exit
  */
+
 int main(void)
 {
 	int i = 1;
