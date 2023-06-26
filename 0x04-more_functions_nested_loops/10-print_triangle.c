@@ -3,15 +3,15 @@
  * print_triangle - main function
  *
  * Description: print triangles
+ * @size: the size of the triangle
  *
  * Return : no return 
  */
+
 void print_triangle(int size)
 {
 	if (size <= 0)
-	{
 		_putchar('\n');
-	}
 	else
 	{
 		int i = 0;
@@ -23,13 +23,9 @@ void print_triangle(int size)
 			while (j <= size)
 			{
 				if (j < size - i)
-				{
 					_putchar(' ');
-				}
 				else
-				{
 					_putchar('#');
-				}
 				j++;
 			}
 			i++;
