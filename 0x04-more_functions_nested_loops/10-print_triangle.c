@@ -2,8 +2,8 @@
 /**
  * print_triangle - main function
  *
- * description : prints a triangle
  *
+ * Return : no return 
  */
 void print_triangle(int size)
 {
