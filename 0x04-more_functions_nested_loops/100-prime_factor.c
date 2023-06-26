@@ -22,6 +22,6 @@ int main(void)
 			i++;
 		}
 	}
-	printf ("%lu\n", num);
+	printf("%lu\n", num);
 	return (0);
 }
