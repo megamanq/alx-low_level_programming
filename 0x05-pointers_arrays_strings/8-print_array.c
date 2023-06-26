@@ -1,7 +1,7 @@
 #include "main.h"
 #include <stdio.h>
 /**
- * puts_half - lenght of string
+ * print_array - print an array
  *
  * @a:integer
  * @n:integer
@@ -11,6 +11,7 @@
 void print_array(int *a, int n)
 {
 	int i;
+
 	for (i = 0; i < n; i++)
 	{
 		printf("%d", a[i]);
