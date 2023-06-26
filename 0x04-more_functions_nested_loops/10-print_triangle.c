@@ -2,7 +2,7 @@
 /**
  * print_triangle - main function
  *
- * Description: print triangles
+ * description: print triangles
  * @size: the size of the triangle
  *
  * Return : no return 
