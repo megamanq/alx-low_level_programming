@@ -3,7 +3,7 @@
  * _puts - main function
  *
  * description: take a pointer as prm and update its value
- * @n: pointer to an int
+ * @str: pointer to a string
  *
  * Return: no return
  */
