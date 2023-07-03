@@ -1,22 +1,19 @@
 #include "main.h"
 /**
- * _memcpy - main function
- * 
- * description: copie frm memry src to memry dest
- * @dest: char
- * @src: char
- * @n: int
+ * _memcpy - copie mem area
  *
- * Return: dest on succeed
+ * @dest:char
+ * @src:char
+ * @n:int
+ *
+ * Return:char pointer
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
-	unsigned int i = 0;
+	unsigned int i;
 
-	while (i < n)
-	{
+	for (i = 0; i < n; i++)
 		dest[i] = src[i];
-		i++;
-	}
+
 	return (dest);
 }
