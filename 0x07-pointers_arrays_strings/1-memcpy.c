@@ -2,12 +2,12 @@
 /**
  * _memcpy - main function
  * 
- * description: copies n bytes frm memry src to memry dest
+ * description: copie frm memry src to memry dest
  * @dest:char
  * @src:char
  * @n:int
  *
- * Return: pointer to dest
+ * Return: dest on succeed
  */
 char *_memcpy(char *dest, char *src, unsigned int n)
 {
