@@ -1,8 +1,10 @@
 #include "main.h"
 /**
  * _strchr - get char in string
- * @s:string
- * @c:char
+ *
+ * @s: string
+ * @c: char
+ *
  * Return: pointer to char
  */
 char *_strchr(char *s, char c)
