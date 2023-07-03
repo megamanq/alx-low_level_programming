@@ -3,9 +3,9 @@
  * _memcpy - main function
  * 
  * description: copie frm memry src to memry dest
- * @dest:char
- * @src:char
- * @n:int
+ * @dest: char
+ * @src: char
+ * @n: int
  *
  * Return: dest on succeed
  */
