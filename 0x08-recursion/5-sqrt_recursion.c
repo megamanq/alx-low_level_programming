@@ -1,27 +1,27 @@
 #include "main.h"
 /**
- * _sqrt_recursion - main fonction
- * @n: integer
- * Return: integer
+ * validate - get square root
+ * @a:int
+ * @b:int
+ * Return: int
  */
-int _sqrt_recursion(int n)
+int validate(int a, int b)
 {
-	return (_sqrt(n, 1));
+	if (a * a == b)
+		return (a);
+	if (a * a > b)
+		return (-1);
+	return (validate(a + 1, b));
 }
 
 /**
- * _sqrt - sqrt recur
- * @n: int
- * @i: inte
- * Return: sqrt
+ * _sqrt_recursion - get natural square of int
+ * @n: int to get sqr of
+ * Return: sqr
  */
-int _sqrt(int n, int i)
+int _sqrt_recursion(int n)
 {
-	if (n < 0)
-		return (-1);
-	if ((i * i) > n)
-		return (-1);
-	if (i * i == n)
-		return (i);
-	return (_sqrt(n, i + 1));
+	if (n == 0)
+		return (0);
+	return (validate(1, n));
 }
