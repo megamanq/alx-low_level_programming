@@ -1,26 +1,35 @@
 #include "main.h"
 /**
- * cap_string - capitalise each word
- * @x: string to capitalize
- * Return: capitalized x
+ * cap_string - Capitalizes all words in a string
+ * @str: The string to capitalize
+ *
+ * Return: The capitalized string
  */
-char *cap_string(char *x)
+char *cap_string(char *str)
 {
 	int i = 0;
+	int capitalize = 1;
 
-	while (x[i])
+	while (str[i])
 	{
-		if (x[i] == ' ' || x[i] == '\t' || x[i] == '\n' ||
-		    x[i] == ',' || x[i] == ';' || x[i] == '.' ||
-		    x[i] == '!' || x[i] == '?' || x[i] == '"' ||
-		    x[i] == '(' || x[i] == ')' || x[i] == '{' || x[i] == '}')
+		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
+		    str[i] == ',' || str[i] == ';' || str[i] == '.' ||
+		    str[i] == '!' || str[i] == '?' || str[i] == '"' ||
+		    str[i] == '(' || str[i] == ')' || str[i] == '{' || str[i] == '}')
 		{
-			if (x[i + 1] <= 122 && x[i + 1 ] >= 97)
-			{
-				x[i + 1] = (x[i + 1] - 32);
-			}
+			capitalize = 1;
 		}
+		else if (capitalize)
+		{
+			if (str[i] >= 'a' && str[i] <= 'z')
+			{
+				str[i] = str[i] - 'a' + 'A';
+			}
+			capitalize = 0;
+		}
+
 		i++;
 	}
-	return (x);
+
+	return str;
 }
