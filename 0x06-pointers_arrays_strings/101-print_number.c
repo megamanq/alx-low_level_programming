@@ -25,13 +25,11 @@ void print_number(int n)
 		{
 			m = n;
 		}
-
 		while (m > 9)
 		{
 			div *= 10;
 			m /= 10;
 		}
-
 		while (n)
 		{
 			i = n / div;
