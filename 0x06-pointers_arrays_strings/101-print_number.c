@@ -21,17 +21,16 @@ void print_number(int n)
 			n += 1;
 			n *= -1;
 			n++;
-			m = n;
 		}
-		else
-		{
-			m = n;
-		}
+
+		m = n;
+
 		while (m > 9)
 		{
 			div *= 10;
 			m /= 10;
 		}
+
 		while (n)
 		{
 			i = n / div;
