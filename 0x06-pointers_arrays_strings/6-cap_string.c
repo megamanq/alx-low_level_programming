@@ -6,26 +6,29 @@
  */
 char *cap_string(char *str)
 {
+	char a[13] = {' ', '\t', '\n', ',', ';', '.', '!', '?', '"', '(', ')', '{', '}'};
 	int i = 0;
 	int capitalize = 1;
 
 	while (str[i])
 	{
-		if (str[i] == ' ' || str[i] == '\t' || str[i] == '\n' ||
-		str[i] == ',' || str[i] == ';' || str[i] == '.' ||
-		str[i] == '!' || str[i] == '?' || str[i] == '"' ||
-		str[i] == '(' || str[i] == ')' || str[i] == '{' || str[i] == '}')
+		int j = 0;
+
+		for (j = 0; j <= 13; j++)
 		{
-			capitalize = 1;
-		}
-		else if (capitalize)
-		{
-			if (str[i] >= 'a' && str[i] <= 'z')
+			if (str[i] == a[j])
 			{
-				str[i] = str[i] - ('a' - 'A');
+				capitalize = 1;
 			}
-			capitalize = 0;
-		}
+			else if (capitalize)
+			{
+				if (str[i] >= 'a' && str[i] <= 'z')
+				{
+					str[i] = str[i] - ('a' - 'A');
+				}
+				capitalize = 0;
+			}
+		}	
 		i++;
 	}
 	return str;
