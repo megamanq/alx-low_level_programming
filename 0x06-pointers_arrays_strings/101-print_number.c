@@ -12,8 +12,8 @@ void print_number(int n)
 	}
 	else
 	{
-		unsigned int m, i;
-		unsigned int div = 1;
+		unsigned int temp;
+		unsigned int diviser = 1;
 
 		if (n < 0)
 		{
@@ -21,20 +21,19 @@ void print_number(int n)
 			n = -n;
 		}
 
-		m = n;
+		temp = n;
 
-		while (m > 9)
+		while (temp / 10 != 0)
 		{
-			div *= 10;
-			m /= 10;
+			diviser *= 10;
+			temp /= 10;
 		}
 
-		while (n)
+		while (diviser != 0)
 		{
-			i = n / div;
-			n %= div;
-			div /= 10;
-			_putchar('0' + i);
+			_putchar('0' + (n / diviser));
+			n %= diviser;
+			diviser /= 10;
 		}
 	}
 }
