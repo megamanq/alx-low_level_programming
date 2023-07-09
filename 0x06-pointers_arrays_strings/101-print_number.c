@@ -12,8 +12,8 @@ void print_number(int n)
 	}
 	else
 	{
-		int m, i;
-		int div = 1;
+		unsigned int m, i;
+		unsigned int div = 1;
 
 		if (n < 0)
 		{
