@@ -6,8 +6,8 @@
  */
 char *leet(char *str)
 {
-	char letters[10] = "aAeEoOtTlL",
-		codes[5] = "43071";
+	char letters[10] = "aAeEoOtTlL";
+	char codes[5] = "43071";
 	int j, i = 0;
 
 	while (str[i])
