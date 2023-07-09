@@ -17,6 +17,7 @@ char *leet(char *str)
 			if (str[i] == letters[j])
 			{
 				int c = j / 2;
+
 				str[i] = codes[c];
 			}
 		}
