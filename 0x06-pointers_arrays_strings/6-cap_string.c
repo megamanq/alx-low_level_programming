@@ -2,7 +2,6 @@
 /**
  * cap_string - Capitalizes all words in a string
  * @str: The string to capitalize
- *
  * Return: The capitalized string
  */
 char *cap_string(char *str)
@@ -23,13 +22,11 @@ char *cap_string(char *str)
 		{
 			if (str[i] >= 'a' && str[i] <= 'z')
 			{
-				str[i] = str[i] - 'a' + 'A';
+				str[i] = str[i] - ('a' - 'A');
 			}
 			capitalize = 0;
 		}
-
 		i++;
 	}
-
 	return str;
 }
