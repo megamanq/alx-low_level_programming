@@ -3,7 +3,7 @@
 #include <stdio.h>
 /**
  * str_concat - conct tw str
- * @s1: fst str 
+ * @s1: fst str
  * @s2: sec str
  *
  * Return: str
