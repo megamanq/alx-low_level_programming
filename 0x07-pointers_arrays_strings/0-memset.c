@@ -3,7 +3,7 @@
  * _memset - fill memory by a constant byte
  * @s: memory area to fill
  * @b: constant byte
- * @n n bytes to fill
+ * @n: bytes to fill
  *
  * Return: ptr to memory area
  */
