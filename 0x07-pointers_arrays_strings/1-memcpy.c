@@ -2,7 +2,7 @@
 /**
  * _memcpy - copy mem area
  * @dest: dest memory area
- * @scr: source mem area
+ * @src: source mem area
  * @n: bytes  to copy
  *
  * Return: ptr to dest
