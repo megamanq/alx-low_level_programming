@@ -8,15 +8,15 @@
  */
 void print_diagsums(int *a, int size)
 {
-	int i, sum_r = 0, sum_l = 0;
-	
+	int i, j, sum_r = 0, sum_l = 0;
+
 	for (i = 0; i < size; i++)
 	{
 		sum_r += *(a + (i * size + 1));
 	}
-	for (i = size - 1; i >= 0; i--)
+	for (j = size - 1; j >= 0; j--)
 	{
-		sum_l += *(a + (i * size + (size - i - 1)));
+		sum_l += *(a + (j * size + (size - j - 1)));
 	}
 	printf("%d, %d\n", sum_r , sum_l);
 }
