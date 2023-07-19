@@ -13,9 +13,9 @@ int searchsqrt(int a, int b)
 		return (-1);
 
 	if ((a * a) == b)
-		return a;
+		return (a);
 
-	return (searchsqrt ((a + 1), b));
+	return (searchsqrt((a + 1), b));
 }
 
 /**
