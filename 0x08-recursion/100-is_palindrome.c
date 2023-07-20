@@ -10,7 +10,7 @@ int strleng(char *s)
 {
 	if (s[0] != '\0')
 	{
-		return (1 + strleng( s + 1));
+		return (1 + strleng(s + 1));
 	}
 	return (0);
 }
@@ -39,7 +39,7 @@ int ispal(char *s, int strt, int len)
 }
 
 /**
- * is_palindrome
+ * is_palindrome - check if is palindrome
  * @s: string
  * Return: 1 if pal , 0 if not
  */
@@ -47,5 +47,6 @@ int ispal(char *s, int strt, int len)
 int is_palindrome(char *s)
 {
 	int len = strleng(s) - 1;
+
 	return (ispal(s, 0, len));
 }
