@@ -1,38 +1,51 @@
 #include "main.h"
 
-int checkpal(char *s, int len, int strt)
-{
-	if (*s[strt] != *s[len])
-	{
-		return (0);
-	}
-	if (strt == len || (strt - len) == 1)
-		return (1);
+/**
+ * strleng - get str lenght
+ * @s: string
+ * Return: lenght
+ */
 
-	return (checkpal(s, len - 1, strt + 1));
+int strleng(char *s)
+{
+	if (s[0] != '\0')
+	{
+		return (1 + strleng( s + 1));
+	}
+	return (0);
 }
 
 /**
- * is_palindrome - get if str is palindrome
- * @s: str to checks
- * Return: 1 if success and 0 if not
+ * ispal - check if it is pal
+ * @s: string
+ * @strt: first inex
+ * @len: last index
+ * Return: 1 if pal and 0 if not
+ */
+
+int ispal(char *s, int strt, int len)
+{
+	if (s[strt] == s[len])
+	{
+		if (strt > len / 2)
+			return (1);
+		else
+			return (ispal(s, (strt + 1), (len - 1)));
+	}
+	else
+	{
+		return (0);
+	}
+}
+
+/**
+ * is_palindrome
+ * @s: string
+ * Return: 1 if pal , 0 if not
  */
 
 int is_palindrome(char *s)
 {
-	int i = 0;
-	int a = 0;
-
-	if (!(*s))
-	{
-		return (1);
-	}
-
-	while (*s)
-	{
-		i++;
-		s++;
-	}
-
-	return (checkpal(s, i, a));
+	int len = strleng(s) - 1;
+	return (ispal(s, 0, len));
 }
