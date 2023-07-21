@@ -3,7 +3,7 @@
 #include "100-atoi.c"
 
 /**
- * main - print the args
+ * main - multiply two args
  * @argc: argument count
  * @argv: array of potr to char arguments
  * Return: 0 on sucess
