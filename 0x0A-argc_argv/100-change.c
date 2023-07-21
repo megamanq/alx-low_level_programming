@@ -36,7 +36,7 @@ int main(int argc, char *argv[])
 	{
 		while (amount / coins[i])
 		{
-			coin_num+= amount / coins[i];
+			coin_num += amount / coins[i];
 			amount = amount % coins[i];
 		}
 	}
