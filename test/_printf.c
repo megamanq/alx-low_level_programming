@@ -6,7 +6,7 @@ int strleng(char *str)
 {
 	while (*str)
 	{
-		return (1 + strleng(str++));
+		return (1 + strleng(str + 1));
 	}
 	return 0;
 }
