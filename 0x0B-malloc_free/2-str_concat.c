@@ -15,9 +15,9 @@ char *str_concat(char *s1, char *s2)
 	unsigned int i, j, len1, len2;
 
 	if (!s1)
-		s1[0] = "";
+		*s1 = '\0';
 	else if (!s2)
-		s2[0] = "";
+		*s2 = '\0';
 
 	for (i = 0, len1 = 0; s1[i]; i++)
 		len1++;
