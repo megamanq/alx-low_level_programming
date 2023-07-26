@@ -13,23 +13,30 @@ char *_strdup(char *str)
 	char *buffer;
 	unsigned int i, size;
 
-
-	for (i = 0, size = 0; str[i]; i++)
-	{
-		size++;
-	}
-
-	buffer = malloc(sizeof(char) * size);
-
-	if (!(buffer) || str == NULL)
+	if (!str)
 	{
 		return (0);
 	}
 	else
 	{
-		for (i = 0; i < size; i++)
+		for (i = 0, size = 0; str[i]; i++)
 		{
-			buffer[i] = str[i];
+			size++;
+		}
+
+		buffer = malloc(sizeof(char) * (size + 1));
+
+		if (!(buffer))
+		{
+			return (0);
+		}
+		else
+		{
+			for (i = 0; i < size; i++)
+			{
+				buffer[i] = str[i];
+			}
+			buffer[i] = '\0';
 		}
 	}
 	return (buffer);
