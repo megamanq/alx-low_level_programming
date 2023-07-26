@@ -19,7 +19,7 @@ char *str_concat(char *s1, char *s2)
 	if (!s2)
 		s2 = "";
 
-	len1= len2 = 0;
+	len1 = len2 = 0;
 
 	for (i = 0; s1[i]; i++)
 		len1++;
@@ -46,7 +46,7 @@ char *str_concat(char *s1, char *s2)
 		i++;
 		j++;
 	}
-	
+
 	buffer[i] = '\0';
 
 	return (buffer);
