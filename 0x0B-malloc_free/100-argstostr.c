@@ -4,9 +4,9 @@
 
 /**
  * argstostr - concatenates all args
- * @arg: count
+ * @ac: count
  * @av: arg values
- * return: pointer to new string or null if fails
+ * Return: pointer to new string or null if fails
  */
 
 char *argstostr(int ac, char **av)
