@@ -13,7 +13,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
 	void *buffer;
 	unsigned char *buff_ptr, *ptr_ptr;
-	unsigned int i;
+	unsigned int i, cp_len;
 
 	if (new_size == old_size)
 		return(ptr);
@@ -35,13 +35,17 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	if (!buffer)
 		 return (NULL);
 
+	if(old_size < new_size)
+		cp_len = old_size;
+	else
+		cp_len = new_size;
+
 	buff_ptr = buffer;
 	ptr_ptr = ptr;
 
-	for (i = 0; i < new_size; i++)
+	for (i = 0; i < cp_len; i++)
 	{
-		if (ptr_ptr[i])
-			buff_ptr[i] = ptr_ptr[i];
+		buff_ptr[i] = ptr_ptr[i];
 	}
 
 	free(ptr);
