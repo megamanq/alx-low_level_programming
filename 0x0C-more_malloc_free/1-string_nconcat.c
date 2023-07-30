@@ -44,12 +44,18 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 
 	for (i = 0; i < len1; i++)
 	{
-		buffer[i] = s1[i];
+		if (s1 == NULL)
+			buffer[i] = "";
+		else
+			buffer[i] = s1[i];
 	}
 
 	for (j = 0; i < all_len; j++)
 	{
-		buffer[i++] = s2[j];
+		if (s2 = NULL)
+			buffer[i] = "";
+		else
+			buffer[i++] = s2[j];
 	}
 
 	buffer[i] = '\0';
