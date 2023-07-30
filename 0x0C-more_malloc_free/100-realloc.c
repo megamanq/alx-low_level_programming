@@ -31,7 +31,6 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	}
 
 	buffer = malloc(new_size);
-
 	if (!buffer)
 		return (NULL);
 
@@ -44,11 +43,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	ptr_ptr = ptr;
 
 	for (i = 0; i < cp_len; i++)
-	{
 		buff_ptr[i] = ptr_ptr[i];
-	}
 
 	free(ptr);
-
 	return (buffer);
 }
