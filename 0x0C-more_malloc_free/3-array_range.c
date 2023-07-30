@@ -19,9 +19,10 @@ int *array_range(int min, int max)
 
 	buffer = malloc(sizeof(int) * range);
 
-	for (i = 0, j = min; j <= max; j++, i++)
+	for (i = 0, j = min; j <= max; j++)
 	{
 		buffer[i] = j;
+		i++;
 	}
 
 	return (buffer);
