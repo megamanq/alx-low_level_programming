@@ -33,7 +33,7 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 	buffer = malloc(new_size);
 
 	if (!buffer)
-		 return (NULL);
+		return (NULL);
 
 	if(old_size < new_size)
 		cp_len = old_size;
