@@ -2,9 +2,7 @@
 
 /**
  * main - print the eprgrrm name
- * @argcc: argument count
- * @argv: array of arrguments
- * Return: no return
+ * Return: 0 in succcess
  */
 
 int main(void)
