@@ -1,0 +1,17 @@
+#include "dog.h"
+
+/**
+ * init_dog - initialize a variable de typoe dog
+ * @d: var name
+ * @name: fst memb of struct
+ * @age: scnd memb
+ * @owner: thrd memb
+ * Return: no return
+ */
+
+void init_dog(struct dog *d, char *name, float age, char *owner)
+{
+	(*d).name = name;
+	d->age = age;
+	(*d).owner = owner;
+}
