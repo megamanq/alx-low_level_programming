@@ -3,10 +3,9 @@
 
 /**
  * print_dog - print struct dog
- * @d: pointer to struc
+ * @d: pointer to struct dog
  * Return: no return
  */
-
 void print_dog(struct dog *d)
 {
 	if (d)
