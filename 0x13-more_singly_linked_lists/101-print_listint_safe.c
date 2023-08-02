@@ -3,14 +3,14 @@
 #include <stdio.h>
 
 /**
- * realo - relocates mem for arr of ptr
+ * _r - relocates mem for arr of ptr
  * @list: list to apnd
  * @size: size of nw list
  * @new: nod to add to list
  * Return: ptr
  */
 
-const listint_t **realo(const listint_t **list, size_t size, const listint_t *new)
+const listint_t **_r(const listint_t **list, size_t size, const listint_t *new)
 {
 	const listint_t **newlist;
 	size_t i;
@@ -51,7 +51,7 @@ size_t print_listint_safe(const listint_t *head)
 			}
 		}
 		num++;
-		list = realo(list, num, head);
+		list = _r(list, num, head);
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 	}
