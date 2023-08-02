@@ -3,13 +3,12 @@
 #include <stdio.h>
 
 /**
- * realo - rellocate mem for array of ptr
- * @list: list to apnd
+ * reallo - reallocates memory for an array of pointers
+ * @list: list to append
  * @size: size of new list
  * @new: node to add to list
  * Return: ptr to list
  */
-
 listint_t **reallo(listint_t **list, size_t size, listint_t *new)
 {
 	listint_t **nwlist;
@@ -34,13 +33,12 @@ listint_t **reallo(listint_t **list, size_t size, listint_t *new)
 
 /**
  * free_listint_safe - free listint_t
- * @head: dbl ptr to strt of lst
- * Return: num of node inlst
+ * @head: dbl ptr to start of list
+ * Return: num of nodes in list
  */
-
 size_t free_listint_safe(listint_t **head)
 {
-	size_t j, x= 0;
+	size_t j, x = 0;
 	listint_t **lst = NULL;
 	listint_t *nxt;
 
@@ -59,7 +57,6 @@ size_t free_listint_safe(listint_t **head)
 				return (x);
 			}
 		}
-
 		x++;
 		lst = reallo(lst, x, *head);
 		nxt = (*head)->next;
