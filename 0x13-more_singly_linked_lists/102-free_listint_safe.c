@@ -49,7 +49,7 @@ size_t free_listint_safe(listint_t **head)
 
 	while (*head != NULL)
 	{
-		for (j = 0; j < num; j++)
+		for (j = 0; j < x; j++)
 		{
 			if (*head == lst[j])
 			{
@@ -61,7 +61,7 @@ size_t free_listint_safe(listint_t **head)
 		}
 
 		x++;
-		list = realo(lst, x, *head);
+		lst = realo(lst, x, *head);
 		nxt = (*head)->next;
 		free(*head);
 		*head = nxt;
