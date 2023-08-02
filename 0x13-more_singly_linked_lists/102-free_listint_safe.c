@@ -10,7 +10,7 @@
  * Return: ptr to list
  */
 
-listint_t **realo(listint_t **list, size_t size, listint_t *new)
+listint_t **reallo(listint_t **list, size_t size, listint_t *new)
 {
 	listint_t **nwlist;
 	size_t j;
@@ -61,7 +61,7 @@ size_t free_listint_safe(listint_t **head)
 		}
 
 		x++;
-		lst = realo(lst, x, *head);
+		lst = reallo(lst, x, *head);
 		nxt = (*head)->next;
 		free(*head);
 		*head = nxt;
