@@ -37,24 +37,24 @@ const listint_t **_realo(const listint_t **list, size_t size, const listint_t *n
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t i, x = 0;
-	const listint_t **lst = NULL;
+	const listint_t **list = NULL;
 
 	while (head != NULL)
 	{
 		for (i = 0; i < x; i++)
 		{
-			if (head == lst[i])
+			if (head == list[i])
 			{
 				printf("-> [%p] %d\n", (void *)head, head->n);
-				free(lst);
+				free(list);
 				return (x);
 			}
 		}
 		x++;
-		lst = _realo(lst, x, head);
+		list = _realo(list, x, head);
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 	}
-	free(lst);
+	free(list);
 	return (x);
 }
