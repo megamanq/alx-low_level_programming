@@ -3,7 +3,7 @@
 #include <stdio.h>
 
 /**
- * realo - relocates mem for arr of ptr
+ * _realo - relocates mem for arr of ptr
  * @list: list to apnd
  * @size: size of nw list
  * @new: nod to add to list
