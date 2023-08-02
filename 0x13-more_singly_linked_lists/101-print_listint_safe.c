@@ -26,7 +26,7 @@ const listint_t **realo(const listint_t **list, size_t size, const listint_t *ne
 	for (j = 0; j < size - 1; j++)
 		nwlist[j] = list[j];
 
-	nwlist[i] = new;
+	nwlist[j] = new;
 	free(list);
 
 	return (nwlist);
