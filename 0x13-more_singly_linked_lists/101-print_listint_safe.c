@@ -3,13 +3,13 @@
 #include <stdio.h>
 
 /**
- * rrealo - relocates memory for array of pointers
+ * _r - relocates memory for array of pointers
  * @list: list to append
  * @size: size of new list
  * @new: node to add to list
  * Return: ptr
  */
-const listint_t **rrealo(const listint_t **list, size_t size, const listint_t *new)
+const listint_t **_r(const listint_t **list, size_t size, const listint_t *new)
 {
 	const listint_t **nwlist;
 	size_t j;
@@ -51,7 +51,7 @@ size_t print_listint_safe(const listint_t *head)
 			}
 		}
 		x++;
-		list = rrealo(list, x, head);
+		list = _r(list, x, head);
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 	}
