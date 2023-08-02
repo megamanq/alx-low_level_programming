@@ -61,6 +61,13 @@ int strleng(char *str)
 	return (i);
 }
 
+/**
+ * strcp - copy scr to dest
+ * @dest: destinatiopn
+ * @src: source
+ * Return: ptr to destinaztion
+ */
+
 char *strcp(char *dest, char *src)
 {
 	unsigned int i;
