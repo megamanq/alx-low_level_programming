@@ -10,22 +10,26 @@
  * Return: ptr
  */
 
-const listint_t **realo(const listint_t **list, size_t size, const listint_t *new)
+const listint_t **_realo(const listint_t **list, size_t size, const listint_t *new)
 {
-	const listint_t **newlist;
-	size_t i;
+	const listint_t **nwlist;
+	size_t j;
 
-	newlist = malloc(size * sizeof(listint_t *));
-	if (newlist == NULL)
+	nwlist = malloc(size * sizeof(listint_t *));
+
+	if (nwlist == NULL)
 	{
 		free(list);
 		exit(98);
 	}
-	for (i = 0; i < size - 1; i++)
-		newlist[i] = list[i];
-	newlist[i] = new;
+
+	for (j = 0; j < size - 1; j++)
+		nwlist[j] = list[j];
+
+	nwlist[j] = new;
 	free(list);
-	return (newlist);
+
+	return (nwlist);
 }
 
 /**
@@ -36,25 +40,28 @@ const listint_t **realo(const listint_t **list, size_t size, const listint_t *ne
 
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t i, num = 0;
-	const listint_t **list = NULL;
+	size_t i, x = 0;
+	const listint_t **lst = NULL;
 
 	while (head != NULL)
 	{
-		for (i = 0; i < num; i++)
+		for (i = 0; i < x; i++)
 		{
-			if (head == list[i])
+			if (head == lst[i])
 			{
 				printf("-> [%p] %d\n", (void *)head, head->n);
-				free(list);
-				return (num);
+				free(lst);
+				return (x);
 			}
 		}
-		num++;
-		list = realo(list, num, head);
+
+		x++;
+		lst = _realo(lst, x, head);
 		printf("[%p] %d\n", (void *)head, head->n);
 		head = head->next;
 	}
-	free(list);
-	return (num);
+
+	free(lst);
+
+	return (x);
 }
