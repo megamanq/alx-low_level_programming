@@ -24,7 +24,7 @@ const listint_t **realo(const listint_t **list, size_t size, const listint_t *ne
 	}
 
 	for (j = 0; j < size - 1; j++)
-		newlist[j] = list[j];
+		nwlist[j] = list[j];
 
 	nwlist[i] = new;
 	free(list);
@@ -33,9 +33,9 @@ const listint_t **realo(const listint_t **list, size_t size, const listint_t *ne
 }
 
 /**
- * print_listint_safe - prints a listint_t linked list.
- * @head: pointer to the start of the list
- * Return: the number of nodes in the list
+ * print_listint_safe - prt listint_t
+ * @head: ptr to strt of lst
+ * Return: num of node in lst
  */
 
 size_t print_listint_safe(const listint_t *head)
