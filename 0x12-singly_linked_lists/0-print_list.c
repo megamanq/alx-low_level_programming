@@ -13,7 +13,7 @@ size_t print_list(const list_t *h)
 
 	if (!h)
 	{
-		return (1);
+		exit(0);
 	}
 
 	temp = h;
