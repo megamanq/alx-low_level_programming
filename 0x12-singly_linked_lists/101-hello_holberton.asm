@@ -1,18 +1,19 @@
 section .data
-    hello db 'Hello, Holberton', 0x0A ; String to print, 0x0A is newline
+    message db "Hello, Holberton", 10
 
 section .text
-    global _start
+global main
+main:
+    ; Prepare syscall parameters
+    mov rax, 1         ; System call number: write
+    mov rdi, 1         ; File descriptor: stdout
+    lea rsi, [message] ; Load address of message
+    mov rdx, 17        ; Message length
 
-_start:
-    ; Write to stdout (file descriptor 1)
-    mov rax, 1                  ; syscall number for sys_write
-    mov rdi, 1                  ; file descriptor 1 (stdout)
-    mov rsi, hello             ; address of the string to print
-    mov rdx, 18                ; length of the string
+    ; Make the syscall
     syscall
 
     ; Exit the program
-    mov rax, 60                ; syscall number for sys_exit
-    xor rdi, rdi               ; return code 0
+    mov rax, 60        ; System call number: exit
+    xor rdi, rdi       ; Exit status: 0
     syscall
