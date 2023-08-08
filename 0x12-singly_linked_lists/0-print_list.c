@@ -11,11 +11,6 @@ size_t print_list(const list_t *h)
 	const list_t *temp;
 	unsigned int count = 0;
 
-	if (!h)
-	{
-		exit(0);
-	}
-
 	temp = h;
 	while (temp)
 	{
