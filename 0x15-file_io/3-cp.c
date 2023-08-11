@@ -8,7 +8,7 @@
 
 /**
  * c_file - close file
- * @file; file descriptor
+ * @file: file descriptor
  * Return: no return
  */
 
