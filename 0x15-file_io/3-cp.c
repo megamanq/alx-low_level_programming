@@ -14,7 +14,11 @@
 
 void c_file(int file)
 {
-	if (close(file))
+	int x;
+
+	x = close(file);
+
+	if (x == -1)
 	{
 		dprintf(STDOUT_FILENO, "Error: Can't close fd %i\n", file);
 		exit(100);
