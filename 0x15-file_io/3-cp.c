@@ -70,14 +70,14 @@ int main(int ac,  char **av)
 
 	copi(file_src, file_dest, av[1], av[2]);
 
-	fc1 = close(fd);
+	fc1 = close(file_src);
 	if (fc1 < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", file_src);
 		return (100);
 	}
 
-	fc2 = close(td);
+	fc2 = close(file_dest);
 	if (fc2 < 0)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", file_dest);
