@@ -22,8 +22,10 @@ void c_elfile(int elf);
  * @e_ident: Pointer to an array containing the ELF magic numbers.
  *
  * Description:
- * This function checks whether a given file adheres to the ELF (Executable and Linkable Format) standards.
- * If the file is not recognized as an ELF file, the program exits with error code 98.
+ * This function checks whether a given file adheres
+ * to the ELF (Executable and Linkable Format) standards.
+ * If the file is not recognized as an ELF file,
+ * the program exits with error code 98.
  */
 
 void validate_elf(unsigned char *e_ident)
@@ -74,7 +76,8 @@ void p_mag(unsigned char *e_ident)
  * @e_ident: Pointer to an array containing the ELF class.
  *
  * Description:
- * This function prints the ELF class value from the provided array in the ELF header.
+ * This function prints the ELF class value
+ * from the provided array in the ELF header.
  * The ELF class indicates whether the ELF file is 32-bit or 64-bit.
  */
 
@@ -103,8 +106,10 @@ void p_cl(unsigned char *e_ident)
  * @e_ident: Pointer to an array containing the ELF data encoding.
  *
  * Description:
- * This function prints the data encoding value from the provided array in the ELF header.
- * The data encoding specifies the endianness of the ELF file's data representation.
+ * This function prints the data encoding value
+ * from the provided array in the ELF header.
+ * The data encoding specifies the endianness of
+ * the ELF file's data representation.
  */
 
 void p_data(unsigned char *e_ident)
@@ -132,7 +137,8 @@ void p_data(unsigned char *e_ident)
  * @e_ident: Pointer to an array containing the ELF version.
  *
  * Description:
- * This function prints the version value from the provided array in the ELF header.
+ * This function prints the version value from
+ * the provided array in the ELF header.
  * The version indicates the version of the ELF file format being used.
  */
 
@@ -157,8 +163,10 @@ void p_vers(unsigned char *e_ident)
  * @e_ident: Pointer to an array containing the ELF OS/ABI.
  *
  * Description:
- * This function prints the OS/ABI value from the provided array in the ELF header.
- * The OS/ABI value identifies the operating system and ABI (Application Binary Interface) for which the ELF file is intended.
+ * This function prints the OS/ABI value from the
+ * provided array in the ELF header.
+ * The OS/ABI value identifies the operating system and ABI
+ * (Application Binary Interface) for which the ELF file is intended.
  */
 
 void p_osab(unsigned char *e_ident)
@@ -207,8 +215,10 @@ void p_osab(unsigned char *e_ident)
  * @e_ident: Pointer to an array containing the ELF ABI version.
  *
  * Description:
- * This function prints the ABI (Application Binary Interface) version value from the provided array in the ELF header.
- * The ABI version indicates the version of the ABI for which the ELF file is compiled.
+ * This function prints the ABI (Application Binary Interface)
+ * version value from the provided array in the ELF header.
+ * The ABI version indicates the version of the ABI for
+ * which the ELF file is compiled.
  */
 
 void p_abi(unsigned char *e_ident)
@@ -223,7 +233,8 @@ void p_abi(unsigned char *e_ident)
  * @e_ident: Pointer to an array containing the ELF class.
  *
  * Description:
- * This function prints the ELF type value provided as 'e_type' along with the ELF class from the array in the ELF header.
+ * This function prints the ELF type value provided as 'e_type'
+ * along with the ELF class from the array in the ELF header.
  * The ELF type indicates the purpose and nature of the ELF file.
  */
 
@@ -262,8 +273,11 @@ void p_type(unsigned int e_type, unsigned char *e_ident)
  * @e_ident: Pointer to an array containing the ELF class.
  *
  * Description:
- * This function prints the entry point address provided as 'e_entry' along with the ELF class from the array in the ELF header.
- * The entry point is the memory address where the execution of the ELF file begins.
+ * This function prints the entry point
+ * address provided as 'e_entry' along
+ * with the ELF class from the array in the ELF header.
+ * The entry point is the memory address where
+ * the execution of the ELF file begins.
  */
 
 void p_entr(unsigned long int e_entry, unsigned char *e_ident)
@@ -289,7 +303,8 @@ void p_entr(unsigned long int e_entry, unsigned char *e_ident)
  * @elf: The file descriptor of the ELF file.
  *
  * Description:
- * This function closes the ELF file associated with the given file descriptor 'elf'.
+ * This function closes the ELF file associated with the
+ * given file descriptor 'elf'.
  * If the file cannot be closed, the program exits with error code 98.
  */
 
@@ -312,8 +327,10 @@ void c_elfile(int elf)
  * Return: 0 xhen success.
  *
  * Description:
- * This function processes an ELF file and displays the information stored in its ELF header.
- * If the file is not recognized as an ELF file or the operation fails, the program exits with error code 98.
+ * This function processes an ELF file and displays the
+ * information stored in its ELF header.
+ * If the file is not recognized as an ELF file or the operation fails,
+ * the program exits with error code 98.
  */
 
 int main(int __attribute__((__unused__)) argc, char *argv[])
