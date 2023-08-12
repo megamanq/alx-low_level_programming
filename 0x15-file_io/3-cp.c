@@ -20,13 +20,25 @@ void copi(int fdsrc, int fddest, char *fnsrc, char *fndest)
 	int reads, writen;
 	char buffer[1024];
 
-	while ((reads = read(fdsrc, buffer, sizeof(buffer))) > 0)
+	reads = read(fdsrc, buffer, sizeof(buffer));
+	if (reads == -1)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fnsrc);
+		exit(98);
+	}
+	while (reads > 0)
 	{
 		writen = write(fddest, buffer, reads);
 		if (writen == -1)
 		{
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fndest);
 			exit(99);
+		}
+		reads = read(fdsrc, buffer, sizeof(buffer));
+		if (reads == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fnsrc);
+			exit(98);
 		}
 	}
 
