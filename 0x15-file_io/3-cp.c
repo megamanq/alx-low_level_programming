@@ -38,25 +38,6 @@ void copi(int fdsrc, int fddest, char *fnsrc, char *fndest)
 }
 
 /**
- * c_file - close file
- * @file: file descriptor
- * Return: no return
- */
-
-void c_file(int file)
-{
-	int x;
-
-	x = close(file);
-
-	if (x == -1)
-	{
-		dprintf(STDOUT_FILENO, "Error: Can't close fd %i\n", file);
-		exit(100);
-	}
-}
-
-/**
  * main - copy content of file to another
  * @ac: arg count
  * @av: arg values
@@ -65,7 +46,7 @@ void c_file(int file)
 
 int main(int ac,  char **av)
 {
-	int file_src, file_dest;
+	int file_src, file_dest, fc1, fc2;
 
 	if (ac != 3)
 	{
@@ -89,8 +70,19 @@ int main(int ac,  char **av)
 
 	copi(file_src, file_dest, av[1], av[2]);
 
-	c_file(file_src);
-	c_file(file_dest);
+	fc1 = close(fd);
+	if (fc1 < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", file_src);
+		return (100);
+	}
+
+	fc2 = close(td);
+	if (fc2 < 0)
+	{
+		dprintf(STDERR_FILENO, "Error: Can't close fd %i\n", file_dest);
+		return (100);
+	}
 
 	return (0);
 }
