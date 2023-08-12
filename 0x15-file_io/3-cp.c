@@ -8,43 +8,31 @@
 
 /**
  * copi - copy function
- * @fdsrc: fd src
- * @fddest: fd dest
- * @fnsrc: ffle name source
- * @fndest: file name dest
+ * @file_src: fd src
+ * @file_dest: fd dest
+ * @filename_src: ffle name source
+ * @filename_dest: file name dest
  * Return: no return
  */
 
-void copi(int fdsrc, int fddest, char *fnsrc, char *fndest)
+void copi(int file_src, int file_dest, char *filename_src, char *filename_dest)
 {
-	int reads, writen;
+	int bytes_read, bytes_written;
 	char buffer[1024];
 
-	reads = read(fdsrc, buffer, sizeof(buffer));
-	if (reads == -1)
+	while ((bytes_read = read(file_src, buffer, 1024)) > 0)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fnsrc);
-		exit(98);
-	}
-	while (reads > 0)
-	{
-		writen = write(fddest, buffer, reads);
-		if (writen == -1)
+		bytes_written = write(file_dest, buffer, bytes_read);
+		if (bytes_written == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fndest);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", filename_dest);
 			exit(99);
-		}
-		reads = read(fdsrc, buffer, sizeof(buffer));
-		if (reads == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fnsrc);
-			exit(98);
 		}
 	}
 
-	if (reads == -1)
+	if (bytes_read == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", fnsrc);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", filename_src);
 		exit(98);
 	}
 }
