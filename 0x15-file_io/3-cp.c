@@ -7,6 +7,37 @@
 #include <fcntl.h>
 
 /**
+ * copi - copy function
+ * @fdsrc: fd src
+ * @fddest: fd dest
+ * @fnsrc: ffle name source
+ * @fndest: file name dest
+ * Return: no return
+ */
+
+void copi(int fdsrc, int fddest, char *fnsrc, char *fndest)
+{
+	int reads, writen;
+	char buffer[1024];
+
+	while ((reads = read(fdsrc, buffer, sizeof(buffer))) > 0)
+	{
+		writen = write(fddest, buffer, reads);
+		if (writen == -1)
+		{
+			dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", fndest);
+			exit(99);
+		}
+	}
+
+	if (reads == -1)
+	{
+		dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", fnsrc);
+		exit(98);
+	}
+}
+
+/**
  * c_file - close file
  * @file: file descriptor
  * Return: no return
@@ -34,8 +65,7 @@ void c_file(int file)
 
 int main(int ac,  char **av)
 {
-	int file_src, file_dest, reads, writen;
-	char buffer[1024];
+	int file_src, file_dest;
 
 	if (ac != 3)
 	{
@@ -57,15 +87,7 @@ int main(int ac,  char **av)
 		exit(99);
 	}
 
-	while ((reads = read(file_src, buffer, sizeof(buffer))) > 0)
-	{
-		writen = write(file_dest, buffer, reads);
-		if (writen == -1)
-		{
-			dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", av[2]);
-			exit(99);
-		}
-	}
+	copi(file_src, file_dest, av[1], av[2]);
 
 	c_file(file_src);
 	c_file(file_dest);
