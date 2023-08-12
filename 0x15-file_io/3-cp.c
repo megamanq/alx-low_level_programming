@@ -80,7 +80,7 @@ int main(int ac,  char **av)
 		exit(98);
 	}
 
-	file_dest = open(av[2], O_WRONLY | O_APPEND | O_TRUNC | O_CREAT, 0664);
+	file_dest = open(av[2], O_WRONLY | O_TRUNC | O_CREAT, 0664);
 	if (file_dest == -1)
 	{
 		dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", av[2]);
