@@ -35,7 +35,7 @@ void c_file(int file)
 int main(int ac,  char **av)
 {
 	int file_src, file_dest, reads, writen;
-	char *buffer[1024];
+	char buffer[1024];
 
 	if (ac != 3)
 	{
@@ -44,8 +44,7 @@ int main(int ac,  char **av)
 	}
 
 	file_src = open(av[1], O_RDONLY);
-	reads = read(file_src, buffer, sizeof(buffer));
-	if (file_src == -1 || reads == -1)
+	if (file_src == -1)
 	{
 		dprintf(STDOUT_FILENO, "Error: Can't read from file %s\n", av[1]);
 		exit(98);
@@ -58,7 +57,7 @@ int main(int ac,  char **av)
 		exit(99);
 	}
 
-	while (reads > 0)
+	while ((reads = read(file_src, buffer, sizeof(buffer))) > 0)
 	{
 		writen = write(file_dest, buffer, reads);
 		if (writen == -1)
@@ -66,7 +65,6 @@ int main(int ac,  char **av)
 			dprintf(STDOUT_FILENO, "Error: Can't write to %s\n", av[2]);
 			exit(99);
 		}
-		reads = read(file_src, buffer, sizeof(buffer));
 	}
 
 	c_file(file_src);
