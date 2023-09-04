@@ -7,7 +7,7 @@
 #include <stdlib.h>
 
 /**
- * read_textfile - read text frm file thn print 
+ * read_textfile - read text frm file thn print
  * to POSIX stndrd out
  * @filename: pth of file
  * @letters: nbr char
